@@ -1,0 +1,577 @@
+/* 
+Theme Name: techster Child Theme 
+Theme URI: http://themeid.com/responsive-theme/ 
+Description: Responsive Theme is a flexible foundation with fluid grid system that adapts your website to mobile devices and the desktop or any other viewing environment. Theme features 9 Page Templates, 11 Widget Areas, 6 Template Layouts, 4 Menu Positions and more. Powerful but simple Theme Options for full CMS control with easy Logo Upload, Social Networking and Webmaster Tools etc. Responsive is WooCommerce Compatible, Multilingual Ready (WPML), RTL-Language Support, Retina-Ready, W3C Markup Validated and currently translated into 40 languages. Cross-Browser compatible and yes even the IE7. No paid memberships or clubs to get a FREE/Responsive Support you need. http://themeid.com/support/
+
+Template: responsive
+Version: 1.0.0
+Author: Chris Wenk 
+Author URI: http://techster.co
+Tags: white, black, gray, light, custom-menu, custom-header, custom-background, one-column, two-columns, left-sidebar, right-sidebar, flexible-width, theme-options, threaded-comments, full-width-template, sticky-post, translation-ready, flexible-width, rtl-language-support
+
+License: GNU General Public License
+License URI: license.txt 
+
+Techster WordPress Theme, Copyright (C) 2013 Chris Wenk 
+
+*/
+
+/* =Import Styles
+-------------------------------------------------------------- */
+@import url('../responsive/style.css');
+
+
+	
+/* =Start From Here
+-------------------------------------------------------------- */
+
+/* Nice Page Top Shadow Effect */
+body:before {
+ 
+content: "";
+ 
+position: fixed;
+ 
+top: -10px;
+ 
+left: 0;
+ 
+width: 100%;
+ 
+height: 10px;
+ 
+-webkit-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+ 
+-moz-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+ 
+box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+ 
+z-index: 100;
+ 
+}
+
+
+
+/* Nice Button with shadow */
+a.button:link,
+a.button:visited,
+button,
+input[type=submit],
+input[type=button] {
+    border: 0;
+    color: white;
+    display: inline-block;
+    font: 600 16px/31px "Open Sans","Helvetica Neue",Arial,sans-serif;
+    height: 32px;
+    background-color: 
+    #267CC2;
+    padding: 0 24px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, .25);
+    white-space: nowrap;
+    border-radius: .5em;
+    box-shadow: 0 2px 1px rgba(0, 0, 0, .2), inset 0 -1px 0 rgba(0, 0, 0, .2), inset 0 1px 0 0 rgba(255, 255, 255, .2);
+    background-color: #267CC2;
+    background-image: linear-gradient(#42A5E1, #267CC2);
+    transition-property: -moz-box-shadow,-webkit-box-shadow,box-shadow,line-height;
+    transition-duration: .2s,.2s,.2s,.2s;
+}
+
+a.button:hover,
+a.button:focus,
+button:hover,
+button:focus,
+input[type=submit]:hover,
+input[type=button]:hover,
+input[type=submit]:focus,
+input[type=button]:focus {
+    box-shadow: 0 4px 1px rgba(0, 0, 0, 0.2), 0 -3px 0 rgba(0, 0, 0, 0.2) inset;
+    line-height: 28px;
+    text-decoration: none;
+}
+
+a.button:active, button.button:active {
+    box-shadow: inset 0 2px 0 0 rgba(0, 0, 0, .2), inset 0 12px 24px 6px rgba(0, 0, 0, .2), inset 0 0 2px 2px rgba(0, 0, 0, .2);
+    transition-duration: .1s,.1s,.1s,.1s;
+    line-height: 34px;
+}
+
+
+h1.featured-title {
+    font-size: c60px;
+    letter-spacing: -1px;
+    margin: 0px;
+    padding-top: 40px;
+    text-align: center;
+}
+
+.home .widget-wrapper {
+    min-height: 250px;
+}
+
+.read-more { border: 1px solid black; background: blue; border-radius: 40px; }
+
+/* Hide 
+
+/* =Hide whole post meta
+-------------------------------------------------------------- */
+.post-meta {
+    display: none;
+}
+/* =Hide "Posted on"
+-------------------------------------------------------------- */
+.posted {
+    display: none;
+}
+/* =Hide date
+-------------------------------------------------------------- */
+.timestamp {
+    display: none;
+}
+/* =Hide "by"
+-------------------------------------------------------------- */
+.byline {
+    display: none;
+}
+/* =Hide author
+-------------------------------------------------------------- */
+.author {
+    display: none;
+}
+
+
+/* create an arrow that points up */
+ 
+div.arrow-up {
+ 
+width:0px;
+ 
+height:0px;
+ 
+border-left:5px solid transparent;  /* left arrow slant */
+ 
+border-right:5px solid transparent; /* right arrow slant */
+ 
+border-bottom:5px solid #2f2f2f; /* bottom, add background color here */
+ 
+font-size:0px;
+ 
+line-height:0px;
+ 
+}
+ 
+/* create an arrow that points down */
+ 
+div.arrow-down {
+ 
+width:0px;
+ 
+height:0px;
+ 
+border-left:5px solid transparent;
+ 
+border-right:5px solid transparent;
+ 
+border-top:5px solid #2f2f2f;
+ 
+font-size:0px;
+ 
+line-height:0px;
+ 
+}
+ 
+/* create an arrow that points left */
+ 
+div.arrow-left {
+ 
+width:0px;
+ 
+height:0px;
+ 
+border-bottom:5px solid transparent;  /* left arrow slant */
+ 
+border-top:5px solid transparent; /* right arrow slant */
+ 
+border-right:5px solid #2f2f2f; /* bottom, add background color here */
+ 
+font-size:0px;
+ 
+line-height:0px;
+ 
+}
+ 
+/* create an arrow that points right */
+ 
+div.arrow-right {
+ 
+width:0px;
+ 
+height:0px;
+ 
+border-bottom:5px solid transparent;  /* left arrow slant */
+ 
+border-top:5px solid transparent; /* right arrow slant */
+ 
+border-left:5px solid #2f2f2f; /* bottom, add background color here */
+ 
+font-size:0px;
+ 
+line-height:0px;
+ 
+}
+
+/* Ribbon Effect Html part
+<div class="wrapper">
+       <div class="ribbon-wrapper-green"><div class="ribbon-green">NEWS</div></div>
+</div>
+*/
+
+/* Ribbon Effect CSS Part*/
+
+.wrapper {
+  margin: 50px auto;
+  width: 280px;
+  height: 370px;
+  background: white;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 8px rgba(0,0,0,0.3);
+  -moz-box-shadow:    0px 0px 8px rgba(0,0,0,0.3);
+  box-shadow:         0px 0px 8px rgba(0,0,0,0.3);
+  position: relative;
+  z-index: 90;
+}
+
+.ribbon-wrapper-green {
+  width: 85px;
+  height: 88px;
+  overflow: hidden;
+  position: absolute;
+  top: -3px;
+  right: -3px;
+}
+
+.ribbon-green {
+  font: bold 15px Sans-Serif;
+  color: #333;
+  text-align: center;
+  text-shadow: rgba(255,255,255,0.5) 0px 1px 0px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform:    rotate(45deg);
+  -ms-transform:     rotate(45deg);
+  -o-transform:      rotate(45deg);
+  position: relative;
+  padding: 7px 0;
+  left: -5px;
+  top: 15px;
+  width: 120px;
+  background-color: #BFDC7A;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#BFDC7A), to(#8EBF45)); 
+  background-image: -webkit-linear-gradient(top, #BFDC7A, #8EBF45); 
+  background-image:    -moz-linear-gradient(top, #BFDC7A, #8EBF45); 
+  background-image:     -ms-linear-gradient(top, #BFDC7A, #8EBF45); 
+  background-image:      -o-linear-gradient(top, #BFDC7A, #8EBF45); 
+  color: #6a6340;
+  -webkit-box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+  -moz-box-shadow:    0px 0px 3px rgba(0,0,0,0.3);
+  box-shadow:         0px 0px 3px rgba(0,0,0,0.3);
+}
+
+.ribbon-green:before, .ribbon-green:after {
+  content: "";
+  border-top:   3px solid #6e8900;   
+  border-left:  3px solid transparent;
+  border-right: 3px solid transparent;
+  position:absolute;
+  bottom: -3px;
+}
+
+.ribbon-green:before {
+  left: 0;
+}
+.ribbon-green:after {
+  right: 0;
+}
+
+
+
+/*  End End End */
+
+
+/* Media Print
+-------------------------------------------------------------- */
+@media print {
+
+    h1 {
+	    page-break-before: always;
+    }
+
+    h1,  h2,  h3,  h4,  h5,  h6 {
+	    page-break-after: avoid;
+    }
+
+    ul,  ol,  dl {
+	    page-break-before: avoid;
+    }
+}
+
+/*	Retina (HiDPI) Display
+    http://www.quirksmode.org/blog/archives/2013/06/devicepixelrati.html
+-------------------------------------------------------------- */
+@media 
+    only screen and (-moz-min-device-pixel-ratio:1.5), 
+    only screen and (-o-min-device-pixel-ratio:3/2), 
+    only screen and (-webkit-min-device-pixel-ratio:1.5), 
+    only screen and (min-device-pixel-ratio:1.5) {
+    
+    body {}
+}
+
+/* =Responsive (Mobile) Design
+-------------------------------------------------------------- */
+@media screen and (max-width: 980px) {
+
+    body {}
+	
+    .grid, 
+	.grid-right {
+	    float: none;
+    }
+	
+	#featured-image .fluid-width-video-wrapper {
+	    margin: 20px 0 0 0;
+    }
+	
+	.home #widgets {
+		margin-top: 40px;
+	}
+    
+    .top-widget,
+    .home .top-widget {
+        margin-top: 0 !important;
+    }
+    
+    .hide-980 {
+        display: none;
+    }
+    
+    .show-980 {
+        display: block;
+    }
+    
+}
+
+@media screen and (max-width: 650px) {
+
+    body {}
+
+    #logo {
+	    float: none;
+        margin: 0;
+	    text-align: center;
+    }
+
+    .grid, 
+	.grid-right {
+	    float: none;
+    }
+
+	#featured-image .fluid-width-video-wrapper {
+	    margin: 20px 0 0 0;
+    }
+    
+    .top-widget {
+        float: none;
+        margin: 0 auto 10px auto;
+        position: relative;
+        text-align: center;
+        width: auto;
+    }
+    
+    .top-widget .widget-title {
+        text-align: center;
+    }
+	
+    .js .menu,
+	.js .sub-header-menu {
+		display: none;
+	}
+	
+	.top-menu, 
+	.footer-menu li {
+	    float: none;
+        font-size: 11px;
+	    text-align: center;
+    }
+	
+	.tinynav {
+        display: block;
+    }
+    
+    .sb-holder {
+        display: block;
+    }
+    
+    #author-meta {
+        padding: 20px;
+    }
+    
+    .hide-650 {
+        display: none;
+    }
+    
+    .show-650 {
+        display: block;
+    }
+    
+    #footer {
+	    text-align: center;
+    }
+
+    #footer .social-icons {
+        padding-bottom: 10px;
+	    text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    body {}
+
+    #logo {
+	    float: none;
+	    text-align: center;
+    }
+
+    .grid, 
+	.grid-right {
+	    float: none;
+    }
+	
+	#featured-image .fluid-width-video-wrapper {
+	    margin: 20px 0 0 0;
+	}
+	
+	.featured-title {
+	    font-size: 40px;
+	    padding: 40px 20px 0 20px
+    }
+    
+    .featured-subtitle {
+        font-size: 24px;
+    }
+    
+    .navigation .next,
+    .navigation .previous {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+    }
+	
+    .menu ul, 
+	.menu li, 
+	.top-menu, 
+	.footer-menu li, 
+	.sub-header-menu li {
+	    float: none;
+	    text-align: center;
+        text-rendering: optimizeSpeed;
+    }
+	
+    .hide-480 {
+        display: none;
+    }
+    
+    .show-480 {
+        display: block;
+    }
+    
+    #footer {
+	    text-align: center;
+    }
+
+    #footer .social-icons {
+	    text-align: center;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    
+    body {}
+	
+	#featured p {
+	    font-size: 12px;
+		line-height: 1.5em;
+    }
+
+    .featured-title {
+	    font-size: 35px;
+    }
+	
+	.featured-subtitle {
+		font-size: 15px;
+	}
+
+    .call-to-action a.button {
+	    font-size: 14px;
+	    padding: 7px 17px;
+    }
+
+    .hide-320 {
+        display: none;
+    }
+    
+    .show-320 {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 240px) {
+    
+    body {}
+	
+	#featured p {
+	    font-size: 11px;
+		line-height: 1.5em;
+    }
+
+    .featured-title {
+	    font-size: 20px;
+    }
+	
+	.featured-subtitle {
+		font-size: 11px;
+	}
+
+    .call-to-action a.button {
+	    font-size: 12px;
+	    padding: 5px 15px;
+    }
+    
+    .top-widget area,
+    .top-widget select,
+    .top-widget textarea,
+    .top-widget input[type="text"], 
+    .top-widget input[type="password"] {
+        width: 75%;
+    }
+    
+    .widget-title,
+    .widget-title-home h3 {
+        font-size: 14px;
+        height: 13px;
+        line-height: 13px;
+        text-align: left;
+    }
+    
+    .hide-240 {
+        display: none;
+    }
+    
+    .show-240 {
+        display: block;
+    }
+}
+
+/*The last 29 days of the month are the hardest."- Nikola Tesla*/

@@ -1,0 +1,48 @@
+<html lang="en">
+<head></head>
+<body>
+	<div id="container">
+		<header></header>
+		<div class="content">
+			<h2></h2>
+			<p class="triangle-isosceles"></p>
+			<p class="triangle-isosceles top"></p>
+			<p class="triangle-isosceles left"></p>
+			<p class="triangle-isosceles right"></p>
+			<p class="triangle-right"></p>
+			<p class="triangle-right top"></p>
+			<p class="triangle-right left"></p>
+			<p class="triangle-right right"></p>
+			<p class="triangle-obtuse"></p>
+			<p class="triangle-obtuse top"></p>
+			<p class="triangle-obtuse left"></p>
+			<p class="triangle-obtuse right"></p>
+			<p class="triangle-border"></p>
+			<p class="triangle-border top"></p>
+			<p class="triangle-border left"></p>
+			<p class="triangle-border right"></p>
+			<h2></h2>
+			<h3 class="example-commentheading"></h3>
+			<blockquote class="example-right"></blockquote>
+			<p></p>
+			<blockquote class="example-obtuse"></blockquote>
+			<p></p>
+			<blockquote class="example-twitter" cite="http://twitter.com/necolas/status/9880187933"></blockquote>
+			<p></p>
+			<div class="example-number"></div>
+			<h2></h2>
+			<p></p>
+			<div class="pinched"></div>
+			<blockquote class="oval-speech"></blockquote>
+			<blockquote class="oval-thought"></blockquote>
+			<blockquote class="oval-quotes"></blockquote>
+			<p></p>
+			<blockquote class="rectangle-speech-border"></blockquote>
+			<blockquote class="oval-speech-border"></blockquote>
+			<blockquote class="oval-thought-border"></blockquote>
+		</div>
+		<p></p>
+		<p class="follow"></p>
+	</div>
+</body>
+</html>
