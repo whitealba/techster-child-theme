@@ -25,8 +25,8 @@ if ( !defined( 'ABSPATH' ) )
 				<h1 class="entry-title post-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php printf( __( 'Permanent Link to %s', 'responsive' ), the_title_attribute( 'echo=0' ) ); ?>"><?php the_title( ); ?></a></h1>
 <?php endif; ?>
 
-<!-- added triangle-isosceles for speach bubble -->
-<div class="post-meta pinched">
+<!-- added box around meta -->
+<div class="post-meta bubbox">
 <?php responsive_post_meta_data(); ?>
 
 	<?php if ( comments_open() ) : ?>
