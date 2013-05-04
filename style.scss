@@ -23,17 +23,624 @@ Techster WordPress Theme, Copyright (C) 2013 Chris Wenk
 /* =Start From Here
 -------------------------------------------------------------- */
 
+/* = Sidebar font changes
+-------------------------------------------------------------- */
+
+.tab-content {
+  font-family: 'Dosis', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+/* = Main Front page font changes and others
+-------------------------------------------------------------- */
+
 h1.featured-title {
-  font-size: c60px;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+  font-size: 80px;
   letter-spacing: -1px;
   margin: 0px;
   padding-top: 40px;
   text-align: center;
 }
 
+h2.featured-subtitle {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+p {
+  font-family: 'Dosis', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.widget-title-home h3 {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+}
+
 .home .widget-wrapper {
   min-height: 250px;
 }
+
+/* = Blog page changes
+-------------------------------------------------------------- */
+/* .read-more { border: 1px solid black; display: inline-block; background: orange; border-radius: 20px; } */
+
+/*p {
+  font-family: Novecentowide-DemiBold; 
+  font-weight: normal; 
+  font-style: normal; 
+}
+
+.Novecentowide-DemiBold { 
+  font-family: Novecentowide-DemiBold;
+  font-weight: normal;
+  font-style: normal;
+} */
+
+/* Nice Page Top Shadow Effect */
+
+body:before {
+  content: "";
+  position: fixed;
+  top: -10px;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+  z-index: 100;
+}
+
+/* box around meta */
+
+.metabox {
+  position: relative;
+  width: 200px;
+  height: 30px;
+  text-align: center;
+  line-height: 100px;
+  background-color: #fff;
+  border: 8px solid #666;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  -webkit-box-shadow: 2px 2px 4px #888;
+  -moz-box-shadow: 2px 2px 4px #888;
+  box-shadow: 2px 2px 4px #888;
+}
+
+/* Tooltip */
+/* Html  = <a href="#" class="tip" title="Hi, There. I like turtles.">Hover over me!</a></code>  */
+
+a.tip {
+  position: relative;
+  text-decoration: none;
+  &:hover {
+    &:before {
+      display: block;
+      position: absolute;
+      padding: .5em;
+      content: attr(title);
+      min-width: 120px;
+      text-align: center;
+      width: auto;
+      height: auto;
+      white-space: nowrap;
+      top: -32px;
+      background: rgba(0, 0, 0, 0.8);
+      -moz-border-radius: 10px;
+      -webkit-border-radius: 10px;
+      border-radius: 10px;
+      color: #fff;
+      font-size: .86em;
+    }
+    &:after {
+      position: absolute;
+      display: block;
+      content: "";
+      border-color: rgba(0, 0, 0, 0.8) transparent transparent transparent;
+      border-style: solid;
+      border-width: 10px;
+      height: 0;
+      width: 0;
+      position: absolute;
+      top: -8px;
+      left: 1em;
+    }
+  }
+}
+
+/* Bubble with an isoceles triangle
+
+------------------------------------------ */
+
+.triangle-isosceles {
+  position: relative;
+  padding: 15px;
+  margin: 1em 0 3em;
+  color: #000;
+  background: #f3961c;
+  /* css3 */
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: -moz-linear-gradient(top, #f9d835, #f3961c);
+  background: linear-gradient(top, #f9d835, #f3961c);
+  &:after {
+    content: "";
+    display: block;
+    /* reduce the damage in FF3.0 */
+    position: absolute;
+    bottom: -15px;
+    left: 50px;
+    width: 0;
+    border-width: 15px 15px 0;
+    border-style: solid;
+    border-color: #f3961c transparent;
+  }
+}
+
+/* creates triangle */
+
+/* ============================================================================================================================
+== TWITTER
+** ============================================================================================================================ */
+
+.example-twitter {
+  position: relative;
+  padding: 15px;
+  margin: 100px 0 0.5em;
+  color: #333;
+  background: #eee;
+  /* css3 */
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  p {
+    font-size: 28px;
+    line-height: 1.25em;
+  }
+  &:before {
+    content: url(twitter-logo.gif);
+    position: absolute;
+    top: -60px;
+    left: 0;
+    width: 155px;
+    height: 36px;
+    /* reduce the damage in FF3.0 */
+    display: block;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    top: -30px;
+    left: 50px;
+    border: 15px solid transparent;
+    border-bottom-color: #eee;
+    /* reduce the damage in FF3.0 */
+    display: block;
+    width: 0;
+  }
+}
+
+/* this isn't necessary, just saves me having to edit the HTML of the demo */
+
+/* creates the triangle */
+
+/* ============================================================================================================================
+== PINCHED SPEECH BUBBLE (more CSS3)
+** ============================================================================================================================ */
+
+.pinched {
+  position: relative;
+  padding: 15px;
+  margin: 50px 0 3em;
+  text-align: center;
+  color: #fff;
+  background: #333;
+  /* css3 */
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  &:before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    width: 100px;
+    height: 20px;
+    margin: 0 0 0 -50px;
+    background: #333;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 50%;
+    height: 20px;
+    background: #fff;
+    /* css3 */
+    -webkit-border-bottom-right-radius: 15px;
+    -moz-border-radius-bottomright: 15px;
+    border-bottom-right-radius: 15px;
+  }
+  > :first-child:before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    right: 0;
+    width: 50%;
+    height: 20px;
+    background: #fff;
+    /* css3 */
+    -webkit-border-bottom-left-radius: 15px;
+    -moz-border-radius-bottomleft: 15px;
+    border-bottom-left-radius: 15px;
+  }
+}
+
+/* creates a rectangle of the colour wanted for the pointy bit */
+
+/* creates a rounded rectangle to cover part of the rectangle generated above */
+
+/* creates the other rounded rectangle */
+
+/* Zebra strpped tables */
+
+tbody tr:nth-child(odd) {
+  background-color: #ccc;
+}
+
+/* Nice Button with shadow */
+
+/* html code       <a href="#" class="button" role="button">Arsenal Arsenal Arsenal</a>      */
+
+a.bluebutt {
+  &:link, &:visited {
+    border: 0;
+    color: white;
+    display: inline-block;
+    font: 600 16px / 31px "Open Sans", "Helvetica Neue", Arial, sans-serif;
+    height: 32px;
+    background-color: #267CC2;
+    padding: 0 24px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+    white-space: nowrap;
+    border-radius: .5em;
+    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2), inset 0 -1px 0 rgba(0, 0, 0, 0.2), inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
+    background-color: #267CC2;
+    background-image: linear-gradient(#42a5e1, #267cc2);
+    transition-property: -moz-box-shadow,-webkit-box-shadow,box-shadow,line-height;
+    transition-duration: .2s,.2s,.2s,.2s;
+  }
+}
+
+button {
+  border: 0;
+  color: white;
+  display: inline-block;
+  font: 600 16px / 31px "Open Sans", "Helvetica Neue", Arial, sans-serif;
+  height: 32px;
+  background-color: #267CC2;
+  padding: 0 24px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+  white-space: nowrap;
+  border-radius: .5em;
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2), inset 0 -1px 0 rgba(0, 0, 0, 0.2), inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
+  background-color: #267CC2;
+  background-image: linear-gradient(#42a5e1, #267cc2);
+  transition-property: -moz-box-shadow,-webkit-box-shadow,box-shadow,line-height;
+  transition-duration: .2s,.2s,.2s,.2s;
+}
+
+input {
+  &[type=submit], &[type=button] {
+    border: 0;
+    color: white;
+    display: inline-block;
+    font: 600 16px / 31px "Open Sans", "Helvetica Neue", Arial, sans-serif;
+    height: 32px;
+    background-color: #267CC2;
+    padding: 0 24px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+    white-space: nowrap;
+    border-radius: .5em;
+    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2), inset 0 -1px 0 rgba(0, 0, 0, 0.2), inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
+    background-color: #267CC2;
+    background-image: linear-gradient(#42a5e1, #267cc2);
+    transition-property: -moz-box-shadow,-webkit-box-shadow,box-shadow,line-height;
+    transition-duration: .2s,.2s,.2s,.2s;
+  }
+}
+
+a.bluebutt {
+  &:hover, &:focus {
+    box-shadow: 0 4px 1px rgba(0, 0, 0, 0.2), 0 -3px 0 rgba(0, 0, 0, 0.2) inset;
+    line-height: 28px;
+    text-decoration: none;
+  }
+}
+
+button {
+  &:hover, &:focus {
+    box-shadow: 0 4px 1px rgba(0, 0, 0, 0.2), 0 -3px 0 rgba(0, 0, 0, 0.2) inset;
+    line-height: 28px;
+    text-decoration: none;
+  }
+}
+
+input {
+  &[type=submit]:hover, &[type=button]:hover, &[type=submit]:focus, &[type=button]:focus {
+    box-shadow: 0 4px 1px rgba(0, 0, 0, 0.2), 0 -3px 0 rgba(0, 0, 0, 0.2) inset;
+    line-height: 28px;
+    text-decoration: none;
+  }
+}
+
+a.bluebutt:active, button.bluebutt:active {
+  box-shadow: inset 0 2px 0 0 rgba(0, 0, 0, 0.2), inset 0 12px 24px 6px rgba(0, 0, 0, 0.2), inset 0 0 2px 2px rgba(0, 0, 0, 0.2);
+  transition-duration: .1s,.1s,.1s,.1s;
+  line-height: 34px;
+}
+
+/* Hide 
+
+/* =Hide whole post meta
+-------------------------------------------------------------- */
+/*.post-meta {
+    display: none;
+}
+/* =Hide "Posted on"
+-------------------------------------------------------------- */
+/*.posted {
+    display: none;
+}
+/* =Hide date
+-------------------------------------------------------------- */
+/*.timestamp {
+    display: none;
+}
+/* =Hide "by"
+-------------------------------------------------------------- */
+/*.byline {
+    display: none;
+}
+/* =Hide author
+-------------------------------------------------------------- */
+/*.author {
+    display: none;
+} */
+
+/* create an arrow that points up */
+
+div {
+  &.arrow-up {
+    width: 0px;
+    height: 0px;
+    border-left: 5px solid transparent;
+    /* left arrow slant */
+    border-right: 5px solid transparent;
+    /* right arrow slant */
+    border-bottom: 5px solid #2f2f2f;
+    /* bottom, add background color here */
+    font-size: 0px;
+    line-height: 0px;
+  }
+  &.arrow-down {
+    width: 0px;
+    height: 0px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #2f2f2f;
+    font-size: 0px;
+    line-height: 0px;
+  }
+  &.arrow-left {
+    width: 0px;
+    height: 0px;
+    border-bottom: 5px solid transparent;
+    /* left arrow slant */
+    border-top: 5px solid transparent;
+    /* right arrow slant */
+    border-right: 5px solid #2f2f2f;
+    /* bottom, add background color here */
+    font-size: 0px;
+    line-height: 0px;
+  }
+  &.arrow-right {
+    width: 0px;
+    height: 0px;
+    border-bottom: 5px solid transparent;
+    /* left arrow slant */
+    border-top: 5px solid transparent;
+    /* right arrow slant */
+    border-left: 5px solid #2f2f2f;
+    /* bottom, add background color here */
+    font-size: 0px;
+    line-height: 0px;
+  }
+}
+
+/* create an arrow that points down */
+
+/* create an arrow that points left */
+
+/* create an arrow that points right */
+
+/* Ribbon Effect Html part
+<div class="wrapper">
+       <div class="ribbon-wrapper-green"><div class="ribbon-green">NEWS</div></div>
+</div>
+*/
+
+/* Ribbon Effect CSS Part*/
+
+.wrapper {
+  margin: 50px auto;
+  width: 280px;
+  height: 370px;
+  background: white;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 90;
+}
+
+.ribbon-wrapper-green {
+  width: 85px;
+  height: 88px;
+  overflow: hidden;
+  position: absolute;
+  top: -3px;
+  right: -3px;
+}
+
+.ribbon-green {
+  font: bold 15px Sans-Serif;
+  color: #333;
+  text-align: center;
+  text-shadow: rgba(255, 255, 255, 0.5) 0px 1px 0px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  position: relative;
+  padding: 7px 0;
+  left: -5px;
+  top: 15px;
+  width: 120px;
+  background-color: #BFDC7A;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#bfdc7a), to(#8ebf45));
+  background-image: -webkit-linear-gradient(top, #bfdc7a, #8ebf45);
+  background-image: -moz-linear-gradient(top, #bfdc7a, #8ebf45);
+  background-image: -ms-linear-gradient(top, #bfdc7a, #8ebf45);
+  background-image: -o-linear-gradient(top, #bfdc7a, #8ebf45);
+  color: #6a6340;
+  -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+  &:before, &:after {
+    content: "";
+    border-top: 3px solid #6e8900;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    position: absolute;
+    bottom: -3px;
+  }
+  &:before {
+    left: 0;
+  }
+  &:after {
+    right: 0;
+  }
+}
+
+/* Stiching Effect  */
+
+.stiched {
+  font-family: 'Dosis', sans-serif;
+  font-weight: 400;
+  padding: 5px 10px;
+  margin: 10px;
+  background: #7c9c36;
+  color: #fff;
+  font-size: 21px;
+  line-height: 1.3em;
+  border: 2px dashed #fff;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-box-shadow: 0 0 0 4px #ff0030, 2px 1px 4px 4px rgba(10, 10, 0, 0.5);
+  -webkit-box-shadow: 0 0 0 4px #ff0030, 2px 1px 4px 4px rgba(10, 10, 0, 0.5);
+  box-shadow: 0 0 0 4px #7c9c36, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
+  text-shadow: -1px -1px #aa3030;
+}
+
+/* Block Quotes  */
+
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: .5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+  &:before {
+    color: #ccc;
+    /*content:open-quote;*/
+    content: ”\201C”;
+    font-size: 4em;
+    line-height: .1em;
+    margin-right: .25em;
+    vertical-align: -0.4em;
+  }
+  &:after {
+    content: ”\201D”;
+  }
+  p {
+    display: inline;
+  }
+}
+
+/* Bubble yellow small
+
+------------------------------------------ */
+
+.bubbox {
+  background-color: #fff0a0;
+  background-image: -webkit-linear-gradient(top, hsla(0, 0%, 100%, 0.5), hsla(0, 0%, 100%, 0));
+  background-image: -moz-linear-gradient(top, hsla(0, 0%, 100%, 0.5), hsla(0, 0%, 100%, 0));
+  background-image: -ms-linear-gradient(top, hsla(0, 0%, 100%, 0.5), hsla(0, 0%, 100%, 0));
+  background-image: -o-linear-gradient(top, hsla(0, 0%, 100%, 0.5), hsla(0, 0%, 100%, 0));
+  background-image: linear-gradient(top, hsla(0, 0%, 100%, 0.5), hsla(0, 0%, 100%, 0));
+  border-radius: 5px;
+  box-shadow: inset 0 1px 1px hsla(0, 0%, 100%, 0.5), 3px 3px 0 hsla(0, 0%, 0%, 0.1);
+  color: #333;
+  display: inline-block;
+  font: 16px / 25px sans-serif;
+  padding: 15px 25px;
+  position: relative;
+  text-shadow: 0 1px 1px hsla(0, 0%, 100%, 0.5);
+  &:after {
+    border-bottom: 25px solid transparent;
+    border-right: 25px solid #fff0a0;
+    bottom: -25px;
+    content: '';
+    position: absolute;
+    right: 25px;
+  }
+  &:before {
+    border-bottom: 25px solid transparent;
+    border-right: 25px solid #fff0a0;
+    bottom: -25px;
+    content: '';
+    position: absolute;
+    right: 25px;
+    border-right: 25px solid hsla(0, 0%, 0%, 0.1);
+    bottom: -28px;
+    right: 22px;
+  }
+}
+
+/*  End End End */
 
 /* Media Print
 -------------------------------------------------------------- */

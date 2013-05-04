@@ -35,6 +35,7 @@ if ( !defined('ABSPATH')) exit;
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
 <?php wp_enqueue_style('responsive-style', get_stylesheet_uri(), false, '1.9.3.1');?>
+<link href='http://fonts.googleapis.com/css?family=Dosis|Ubuntu:700' rel='stylesheet' type='text/css'>
 <!-- <?php wp_enqueue_style('MyFonts-style', get_stylesheet_directory_uri() . '/css/MyFonts.css', false, '1.0', 'all' );?> -->
 <?php wp_head(); ?>
 </head>

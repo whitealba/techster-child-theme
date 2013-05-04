@@ -122,7 +122,7 @@ $responsive_options = responsive_get_options();
  <!-- Remove upper arrow scroll top <div class="grid col-300 scroll-top"><a href="#scroll-top" title="<?php esc_attr_e( 'scroll to top', 'responsive' ); ?>"><?php _e( '&uarr;', 'responsive' ); ?></a></div>   -->
 
         <div class="grid col-300 scroll-top">
-            <a href="#scroll-top"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/Arrow-Up-32.png" width="54" height="32" alt="" /></a>
+            <a href="#scroll-top"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/totop_scroller.png" width="29" height="30" alt="go to top" /></a>
    <!--     <a href="#scroll-top" title="<?php esc_attr_e( 'scroll to top', 'responsive' ); ?>"><?php _e( '&uarr;', 'responsive' ); ?></a> -->
         </div>
 
